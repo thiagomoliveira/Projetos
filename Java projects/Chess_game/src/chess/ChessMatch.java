@@ -24,9 +24,9 @@ public class ChessMatch {
 		return mat;
 	}
 	
-	public ChessPiece PerformChassMove(ChessPosition sourcePosition, ChessPosition targerPosition) {
-		Position source = sourcePosition.ToPosition();
-		Position target = targerPosition.ToPosition();
+	public ChessPiece PerformChassMove(ChessPosition sourcePosition, ChessPosition targetPosition) {
+		Position source = sourcePosition.toPosition();
+		Position target = targetPosition.toPosition();
 		validateSourcePosition(source);
 		Piece capturedPiece = makeMove(source, target);
 		return (ChessPiece) capturedPiece;
@@ -45,7 +45,7 @@ public class ChessMatch {
 	}
 
 	private void placeNewPiece(char column, int row, ChessPiece piece) {
-		board.placePiece(piece, new ChessPosition(column, row).ToPosition());
+		board.placePiece(piece, new ChessPosition(column, row).toPosition());
 	}
 	
 	private void initialSetup() {
