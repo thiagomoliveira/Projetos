@@ -13,6 +13,7 @@ import com.springboot.webservices.repositories.UserRepository;
 @Configuration
 @Profile("test")
 public class TestConfig implements CommandLineRunner {
+	
 	@Autowired
 	private UserRepository userRepository;
 
